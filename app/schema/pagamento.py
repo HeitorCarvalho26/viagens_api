@@ -1,25 +1,26 @@
 from typing import Optional
 from pydantic import BaseModel
-from sqlalchemy import BigInteger, SmallInteger, DateTime, Float
+from datetime import datetime
+# from sqlalchemy import BigInteger, SmallInteger, DateTime, Float
 
 class PagamentoSchema(BaseModel):
-    id_pagamento: BigInteger
-    id_corrida: BigInteger
-    id_metodo_pagamento: SmallInteger
+    id_pagamento: int
+    id_corrida: int
+    id_metodo_pagamento: int
 
-    valor: Float
-    datahora_transacao: DateTime
+    valor: float
+    datahora_transacao: datetime
 
     class Config:
         from_attributes = True
 
 class PagamentoUpdateSchema(BaseModel):
-    id_pagamento: Optional[BigInteger]
-    id_corrida: Optional[BigInteger]
-    id_metodo_pagamento: Optional[SmallInteger]
+    id_pagamento: Optional[int]
+    id_corrida: Optional[int]
+    id_metodo_pagamento: Optional[int]
 
-    valor: Optional[Float]
-    datahora_transacao: Optional[DateTime]
+    valor: Optional[float]
+    datahora_transacao: Optional[datetime]
 
     class Config:
         from_attributes = True

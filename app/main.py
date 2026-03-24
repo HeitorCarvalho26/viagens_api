@@ -1,19 +1,19 @@
 
 from fastapi import FastAPI
 from app.database import Base, engine
-from app.route.avaliacao import avaliacao
-from app.route.classe import classe
-from app.route.combustivel import combustivel
-from app.route.corrida import corrida
-from app.route.metodo_pagamento import metodo_pagamento
-from app.route.modelo import modelo
-from app.route.motorista_veiculo import motorista_veiculo
-from app.route.motorista import motorista
-from app.route.pagamento import pagamento
-from app.route.passageiro import passageiro
-from app.route.servico import servico
-from app.route.usuario import usuario
-from app.route.veiculo import veiculo
+from app.routes.avaliacao import avaliacao
+from app.routes.classe import classe
+from app.routes.combustivel import combustivel
+from app.routes.corrida import corrida
+from app.routes.metodo_pagamento import metodo_pagamento
+from app.routes.modelo import modelo
+from app.routes.motorista_veiculo import motorista_veiculo
+from app.routes.motorista import motorista
+from app.routes.pagamento import pagamento
+from app.routes.passageiro import passageiro
+from app.routes.servico import servico
+from app.routes.usuario import usuario
+from app.routes.veiculo import veiculo
 
 Base.metadata.create_all(bind=engine)
 

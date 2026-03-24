@@ -1,24 +1,25 @@
 
 from typing import Optional
 from pydantic import BaseModel
-from sqlalchemy import BigInteger, DateTime
+from datetime import datetime
+# from sqlalchemy import int, DateTime
 
 class MotoristaVeiculoSchema(BaseModel):
-    id_motorista: BigInteger
-    id_veiculo: BigInteger
+    id_motorista: int
+    id_veiculo: int
 
-    datahora_disp: Optional[DateTime]
-    datahora_indisp: Optional[DateTime]
+    datahora_disp: Optional[datetime]
+    datahora_indisp: Optional[datetime]
 
     class Config:
         from_attributes = True
 
 class MotoristaVeiculoUpdateSchema(BaseModel):
-    id_motorista: Optional[BigInteger]
-    id_veiculo: Optional[BigInteger]
+    id_motorista: Optional[int]
+    id_veiculo: Optional[int]
 
-    datahora_disp: Optional[DateTime]
-    datahora_indisp: Optional[DateTime]
+    datahora_disp: Optional[datetime]
+    datahora_indisp: Optional[datetime]
 
     class Config:
         from_attributes = True

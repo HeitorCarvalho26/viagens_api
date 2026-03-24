@@ -2,7 +2,7 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from app.database import get_db
-from app.model.servico import ServicoModel
+from app.models.servico import ServicoModel
 from app.schema.servico import ServicoSchema, ServicoUpdateSchema
 
 servico = APIRouter()

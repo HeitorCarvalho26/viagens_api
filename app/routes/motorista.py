@@ -2,7 +2,7 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from app.database import get_db
-from app.model.motorista import MotoristaModel
+from app.models.motorista import MotoristaModel
 from app.schema.motorista import MotoristaSchema, MotoristaUpdateSchema
 
 motorista = APIRouter()

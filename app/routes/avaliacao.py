@@ -2,7 +2,7 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from app.database import get_db
-from app.model.avaliacao import AvaliacaoModel
+from app.models.avaliacao import AvaliacaoModel
 from app.schema.avaliacao import AvaliacaoSchema, AvaliacaoUpdateSchema
 
 avaliacao = APIRouter()

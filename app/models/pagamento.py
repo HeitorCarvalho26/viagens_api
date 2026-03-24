@@ -10,5 +10,5 @@ class PagamentoModel(Base):
     id_corrida: Mapped[int] = mapped_column(BigInteger, ForeignKey('corrida.id_corrida', ondelete="CASCADE"), unique=True, nullable=False)
     id_metodo_pagamento: Mapped[int] = mapped_column(SmallInteger, ForeignKey('metodo_pagamento.id_metodo_pagamento', ondelete="CASCADE"), unique=True, nullable=False)
 
-    valor: Mapped[int] = mapped_column("{:.2f}".format(Float), nullable=False)
+    valor: Mapped[int] = mapped_column((Float), nullable=False)
     datahora_transacao: Mapped[DateTime] = mapped_column(DateTime, nullable=False)

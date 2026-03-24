@@ -2,7 +2,7 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from app.database import get_db
-from app.model.veiculo import VeiculoModel
+from app.models.veiculo import VeiculoModel
 from app.schema.veiculo import VeiculoSchema, VeiculoUpdateSchema
 
 veiculo = APIRouter()

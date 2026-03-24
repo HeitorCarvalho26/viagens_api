@@ -1,26 +1,28 @@
 
+# from enum import Enum
 from typing import Optional
 from pydantic import BaseModel
-from sqlalchemy import Enum, BigInteger, Integer, CHAR
+# from sqlalchemy import Enum, BigInteger, Integer, CHAR
+
 
 class VeiculoSchema(BaseModel):
-    id_veiculo: BigInteger
-    id_modelo: Integer
-    id_classe: Integer
+    id_veiculo: int
+    id_modelo: int
+    id_classe: int
 
-    placa: CHAR
-    seguro: Enum
+    placa: str
+    seguro: bool
 
     class Config:
         from_attributes = True
 
 class VeiculoUpdateSchema(BaseModel):
-    id_veiculo: Optional[BigInteger]
-    id_modelo: Optional[Integer]
-    id_classe: Optional[Integer]
+    id_veiculo: Optional[int]
+    id_modelo: Optional[int]
+    id_classe: Optional[int]
 
-    placa: Optional[CHAR]
-    seguro: Optional[Enum]
+    placa: Optional[str]
+    seguro: Optional[bool]
 
     class Config:
         from_attributes = True

@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from app.database import get_db
-from app.model.pagamento import PagamentoModel
+from app.models.pagamento import PagamentoModel
 from app.schema.pagamento import PagamentoSchema, PagamentoUpdateSchema
 
 pagamento = APIRouter()

@@ -2,7 +2,7 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from app.database import get_db
-from app.model.passageiro import PassageiroModel
+from app.models.passageiro import PassageiroModel
 from app.schema.passageiro import PassageiroSchema, PassageiroUpdateSchema
 
 passageiro = APIRouter()

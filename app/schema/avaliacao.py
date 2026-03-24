@@ -1,24 +1,25 @@
 
 from typing import Optional
 from pydantic import BaseModel
-from sqlalchemy import BigInteger, SmallInteger, DateTime
+from datetime import datetime
+# from sqlalchemy import int, int, DateTime
 
 class AvaliacaoSchema(BaseModel):
-    id_avaliacao: BigInteger
+    id_avaliacao: int
 
-    nota_passageiro: Optional[SmallInteger]
-    nota_motorista: Optional[SmallInteger]
-    datahora_limite: DateTime
+    nota_passageiro: Optional[int]
+    nota_motorista: Optional[int]
+    datahora_limite: datetime
 
     class Config:
         from_attributes = True
 
 class AvaliacaoUpdateSchema(BaseModel):
-    id_avaliacao: Optional[BigInteger]
+    id_avaliacao: Optional[int]
 
-    nota_passageiro: Optional[SmallInteger]
-    nota_motorista: Optional[SmallInteger]
-    datahora_limite: Optional[DateTime]
+    nota_passageiro: Optional[int]
+    nota_motorista: Optional[int]
+    datahora_limite: Optional[datetime]
 
     class Config:
         from_attributes = True

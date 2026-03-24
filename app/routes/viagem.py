@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from app.database import get_db
-from app.model.viagem import ViagemModel
+from app.models.viagem import ViagemModel
 from app.schema.viagem import ViagemSchema, ViagemUpdateSchema
 
 viagem = APIRouter()

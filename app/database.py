@@ -1,4 +1,3 @@
-
 from sqlalchemy import create_engine, text
 from sqlalchemy.orm import sessionmaker, declarative_base
 from pathlib import Path
@@ -12,7 +11,7 @@ SERVER_URL = "mysql+pymysql://root:admin@localhost"
 engine_server = create_engine(SERVER_URL)
 
 with engine_server.connect() as conn:
-    conn.execute(text("CREATE DATABASE IF NOT EXISTS viagens-api"))
+    conn.execute(text("CREATE DATABASE IF NOT EXISTS viagens_api"))
     conn.commit()
 
 DATABASE_URL = "mysql+pymysql://root:admin@localhost/viagens_api"

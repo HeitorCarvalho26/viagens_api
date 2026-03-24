@@ -9,4 +9,4 @@ class ClasseModel(Base):
     id_classe: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
     
     nome_classe: Mapped[str] = mapped_column(VARCHAR(45), nullable=False)
-    fator_preco: Mapped[Float] = mapped_column("{:.2f}".format(Float), nullable=False)
+    fator_preco: Mapped[float] = mapped_column((Float), nullable=False)
